@@ -1,0 +1,22 @@
+*{
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+#button{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#output{
+  background-color: purple;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  border-color: red;
+  text-rendering: auto;
+  width: auto;
+  height: auto;
+}
