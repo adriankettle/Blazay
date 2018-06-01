@@ -6,12 +6,24 @@ function loadText() {
     var xhr = new XMLHttpRequest();
 
     //OPEN,
-  xhr.open('GET','note.json', true);
+  xhr.open('GET','sample.txt', true);
+
+  //optional
+  xhr.onprogress = function () {
+  //  console.log('READYSTATE: ', xhr.readyState);
+  }
 
   xhr.onload = function () {
     if (this.status == 200) {
-      console.log(xhr.responseText);
+      document.getElementById('output').innerHTML = this.responseText;
+      //console.log(xhr.responseText);
+    }else if (this.status == 404) {
+      document.getElementById('output').innerHTML = this.responseText;
     }
+  }
+
+  xhr.onerror = function () {
+    console.log('Request Error...');
   }
   xhr.send();
 }
